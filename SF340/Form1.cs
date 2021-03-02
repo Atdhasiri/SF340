@@ -13,38 +13,57 @@ namespace SF340
 {
     public partial class Form1 : Form
     {
-        public string answer = "";
-        private int max;
+        private int totalScore;
+        private Question question;
         public Form1()
         {
             InitializeComponent();
-            SQLiteConnection con = new SQLiteConnection(@"data source=D:\SF340\SF340\SF340\Vocab.db");
-            con.Open();
-
+            setNewQuestion();
+            totalScore = 0;
+            score.Text = "score: " + totalScore;
 
         }
 
 
         private void button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void setQuestion(SQLiteConnection con)
-        {
-            Random rand = new Random();
-            int a, b, c, d;
-            do
+            string selectedChoice = (sender as Button).Text;
+            if (selectedChoice == question.getAnswer())
             {
-                a = rand.Next(1, max);
-                b = rand.Next(1, max);
-                c = rand.Next(1, max);
-                d = rand.Next(1, max);
-            } while ((a == b) || (b == c) || (a == c));
+                correctAnswer();
+                setNewQuestion();
+            }
+            else
+            {
+                incorrectAnswer();
+                setNewQuestion();
+            }
 
-            string query = "Select word1 from synnonym";
-            SQLiteCommand cmd = new SQLiteCommand(query, con);
-            SQLiteDataReader rdr = cmd.ExecuteReader();
         }
+
+
+        private void correctAnswer()
+        {
+            score.Text = "score: " + ++totalScore;
+        }
+
+        private void incorrectAnswer()
+        {
+            MessageBox.Show("ผิด! โง่ชิบหายเลย เอ้วววว!!", "ตอบผิดไอควาย");
+        }
+
+        private void setNewQuestion()
+        {
+            question = new Question();
+            question_label.Text = question.getQuestion();
+            string[] choice = question.getChoice();
+            choice1_button.Text = choice[0];
+            choice2_button.Text = choice[1];
+            choice3_button.Text = choice[2];
+            choice4_button.Text = choice[3];
+        }
+
+
+
     }
 }
