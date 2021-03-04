@@ -7,7 +7,7 @@ namespace SF340
     public class Question
     {
         private static SQLiteConnection con;
-        private static int TABLE_ROW_COUNT = 8;
+        private static int TABLE_ROW_COUNT = 30;
         private static string DB_PATH = @"data source=D:\SF340\SF340\SF340\Vocab.db";
 
         private int[] randomNumbers;
@@ -25,7 +25,7 @@ namespace SF340
 
         private void selectQuestion(int i)
         {
-            string query = "SELECT word1,word2 FROM synnonym WHERE id=" + i;
+            string query = "SELECT word1,word2 FROM synonyms WHERE id=" + i;
             SQLiteCommand cmd = new SQLiteCommand(query, con);
             SQLiteDataReader rdr = cmd.ExecuteReader();
             rdr.Read();
@@ -36,7 +36,7 @@ namespace SF340
 
         private void selectChoice()
         {
-            string query = "SELECT word2 FROM synnonym WHERE id IN ('" +
+            string query = "SELECT word2 FROM synonyms WHERE id IN ('" +
                 randomNumbers[1] + "', '" +
                 randomNumbers[2] + "', '" +
                 randomNumbers[3] + "')";
