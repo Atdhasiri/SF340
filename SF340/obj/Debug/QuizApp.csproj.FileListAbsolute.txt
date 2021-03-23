@@ -18,3 +18,8 @@ C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\QuizApp.pdb
 C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\QuizApp.frmMain.resources
 C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\QuizApp.csprojAssemblyReference.cache
 C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\vocab\Vocab.db
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\Interop.WMPLib.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\QuizApp.csproj.ResolveComReference.cache
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\Interop.WMPLib.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\AxInterop.WMPLib.dll

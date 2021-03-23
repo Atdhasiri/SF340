@@ -39,13 +39,17 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.timeOut = new System.Windows.Forms.Timer(this.components);
             this.lblRound = new System.Windows.Forms.Label();
+            this.btnSound = new System.Windows.Forms.Button();
             this.pnTimeOut = new System.Windows.Forms.Panel();
             this.lblSummaryRound = new System.Windows.Forms.Label();
             this.lblSummaryScore = new System.Windows.Forms.Label();
             this.btnPlayAgain = new System.Windows.Forms.Button();
             this.lblTimeOut = new System.Windows.Forms.Label();
-            this.btnSound = new System.Windows.Forms.Button();
+            this.pnWelcome = new System.Windows.Forms.Panel();
+            this.btnPlayNow = new System.Windows.Forms.Button();
+            this.lblVocab = new System.Windows.Forms.Label();
             this.pnTimeOut.SuspendLayout();
+            this.pnWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnChoice1
@@ -170,6 +174,19 @@
             this.lblRound.Text = "Round: 1";
             this.lblRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSound
+            // 
+            this.btnSound.BackColor = System.Drawing.Color.Transparent;
+            this.btnSound.BackgroundImage = global::QuizApp.Properties.Resources.sound_volume_24;
+            this.btnSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSound.Location = new System.Drawing.Point(838, 11);
+            this.btnSound.Name = "btnSound";
+            this.btnSound.Size = new System.Drawing.Size(25, 25);
+            this.btnSound.TabIndex = 13;
+            this.btnSound.UseVisualStyleBackColor = false;
+            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
+            // 
             // pnTimeOut
             // 
             this.pnTimeOut.BackColor = System.Drawing.Color.Gainsboro;
@@ -180,7 +197,7 @@
             this.pnTimeOut.Location = new System.Drawing.Point(87, 54);
             this.pnTimeOut.Name = "pnTimeOut";
             this.pnTimeOut.Size = new System.Drawing.Size(700, 441);
-            this.pnTimeOut.TabIndex = 12;
+            this.pnTimeOut.TabIndex = 14;
             // 
             // lblSummaryRound
             // 
@@ -230,18 +247,41 @@
             this.lblTimeOut.Text = "Time Out";
             this.lblTimeOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnSound
+            // pnWelcome
             // 
-            this.btnSound.BackColor = System.Drawing.Color.Transparent;
-            this.btnSound.BackgroundImage = global::QuizApp.Properties.Resources.sound_volume_24;
-            this.btnSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSound.Location = new System.Drawing.Point(838, 11);
-            this.btnSound.Name = "btnSound";
-            this.btnSound.Size = new System.Drawing.Size(25, 25);
-            this.btnSound.TabIndex = 13;
-            this.btnSound.UseVisualStyleBackColor = false;
-            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
+            this.pnWelcome.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnWelcome.Controls.Add(this.btnPlayNow);
+            this.pnWelcome.Controls.Add(this.lblVocab);
+            this.pnWelcome.Location = new System.Drawing.Point(87, 54);
+            this.pnWelcome.Name = "pnWelcome";
+            this.pnWelcome.Size = new System.Drawing.Size(700, 441);
+            this.pnWelcome.TabIndex = 15;
+            // 
+            // btnPlayNow
+            // 
+            this.btnPlayNow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(23)))), ((int)(((byte)(143)))));
+            this.btnPlayNow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlayNow.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlayNow.ForeColor = System.Drawing.Color.White;
+            this.btnPlayNow.Location = new System.Drawing.Point(158, 305);
+            this.btnPlayNow.Name = "btnPlayNow";
+            this.btnPlayNow.Size = new System.Drawing.Size(385, 100);
+            this.btnPlayNow.TabIndex = 8;
+            this.btnPlayNow.Text = "Play now";
+            this.btnPlayNow.UseVisualStyleBackColor = false;
+            this.btnPlayNow.Click += new System.EventHandler(this.btnPlayNow_Click);
+            // 
+            // lblVocab
+            // 
+            this.lblVocab.AutoSize = true;
+            this.lblVocab.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVocab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.lblVocab.Location = new System.Drawing.Point(175, 36);
+            this.lblVocab.Name = "lblVocab";
+            this.lblVocab.Size = new System.Drawing.Size(351, 224);
+            this.lblVocab.TabIndex = 7;
+            this.lblVocab.Text = "TU-GET\r\nVocap";
+            this.lblVocab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
             // 
@@ -251,8 +291,9 @@
             this.BackgroundImage = global::QuizApp.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(875, 549);
-            this.Controls.Add(this.btnSound);
+            this.Controls.Add(this.pnWelcome);
             this.Controls.Add(this.pnTimeOut);
+            this.Controls.Add(this.btnSound);
             this.Controls.Add(this.lblRound);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblQuestion);
@@ -270,6 +311,8 @@
             this.Text = "Quiz App - Vocab (TU-GET)";
             this.pnTimeOut.ResumeLayout(false);
             this.pnTimeOut.PerformLayout();
+            this.pnWelcome.ResumeLayout(false);
+            this.pnWelcome.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,12 +329,15 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timeOut;
         private System.Windows.Forms.Label lblRound;
+        private System.Windows.Forms.Button btnSound;
         private System.Windows.Forms.Panel pnTimeOut;
         private System.Windows.Forms.Label lblSummaryRound;
         private System.Windows.Forms.Label lblSummaryScore;
         private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Label lblTimeOut;
-        private System.Windows.Forms.Button btnSound;
+        private System.Windows.Forms.Panel pnWelcome;
+        private System.Windows.Forms.Button btnPlayNow;
+        private System.Windows.Forms.Label lblVocab;
     }
 }
 

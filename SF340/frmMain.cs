@@ -24,7 +24,14 @@ namespace QuizApp
         public frmMain()
         {
             InitializeComponent();
-            startGame();
+            playSound();
+            pnWelcome.Visible = true;
+            pnTimeOut.Visible = false;
+
+            btnChoice1.Enabled = false;
+            btnChoice2.Enabled = false;
+            btnChoice3.Enabled = false;
+            btnChoice4.Enabled = false;
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -40,6 +47,20 @@ namespace QuizApp
             setNewQuestion();
             this.totalRound++;
             lblRound.Text = "Round: " + this.totalRound;
+
+            if (this.totalTime <= 0)
+            {
+                lblTime.Text = "Time: 0 s";
+                timeOut.Stop();
+                pnTimeOut.Visible = true;
+                lblSummaryScore.Text = "Score: " + this.totalScore;
+                lblSummaryRound.Text = "Round: " + this.totalRound;
+
+                btnChoice1.Enabled = false;
+                btnChoice2.Enabled = false;
+                btnChoice3.Enabled = false;
+                btnChoice4.Enabled = false;
+            }
         }
 
         private void correctAnswer()
@@ -99,6 +120,7 @@ namespace QuizApp
 
         private void startGame()
         {
+            pnWelcome.Visible = false;
             pnTimeOut.Visible = false;
             btnChoice1.Enabled = true;
             btnChoice2.Enabled = true;
@@ -116,6 +138,11 @@ namespace QuizApp
 
             timeOut.Start();
 
+            playSound();
+        }
+
+        private void playSound()
+        {
             this.soundPlayer = new SoundPlayer(Properties.Resources.Among_us_theme);
             if (Properties.Settings.Default.sound == 1)
                 this.soundPlayer.PlayLooping();
@@ -142,6 +169,11 @@ namespace QuizApp
                 Properties.Settings.Default.Save();
                 this.soundPlayer.PlayLooping();
             }
+        }
+
+        private void btnPlayNow_Click(object sender, EventArgs e)
+        {
+            startGame();
         }
     }
 }
