@@ -40,10 +40,10 @@
             this.timeOut = new System.Windows.Forms.Timer(this.components);
             this.lblRound = new System.Windows.Forms.Label();
             this.pnTimeOut = new System.Windows.Forms.Panel();
-            this.lblTimeOut = new System.Windows.Forms.Label();
-            this.btnPlayAgain = new System.Windows.Forms.Button();
-            this.lblSummaryScore = new System.Windows.Forms.Label();
             this.lblSummaryRound = new System.Windows.Forms.Label();
+            this.lblSummaryScore = new System.Windows.Forms.Label();
+            this.btnPlayAgain = new System.Windows.Forms.Button();
+            this.lblTimeOut = new System.Windows.Forms.Label();
             this.pnTimeOut.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,6 +117,7 @@
             // 
             // lblQuestion
             // 
+            this.lblQuestion.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestion.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
             this.lblQuestion.Location = new System.Drawing.Point(12, 132);
@@ -128,6 +129,7 @@
             // 
             // lblScore
             // 
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
             this.lblScore.Location = new System.Drawing.Point(756, 9);
@@ -140,6 +142,7 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
             this.lblTime.Location = new System.Drawing.Point(12, 9);
@@ -156,6 +159,7 @@
             // 
             // lblRound
             // 
+            this.lblRound.BackColor = System.Drawing.Color.Transparent;
             this.lblRound.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRound.ForeColor = System.Drawing.Color.White;
             this.lblRound.Location = new System.Drawing.Point(371, 9);
@@ -177,17 +181,27 @@
             this.pnTimeOut.Size = new System.Drawing.Size(700, 441);
             this.pnTimeOut.TabIndex = 12;
             // 
-            // lblTimeOut
+            // lblSummaryRound
             // 
-            this.lblTimeOut.AutoSize = true;
-            this.lblTimeOut.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
-            this.lblTimeOut.Location = new System.Drawing.Point(152, 26);
-            this.lblTimeOut.Name = "lblTimeOut";
-            this.lblTimeOut.Size = new System.Drawing.Size(397, 112);
-            this.lblTimeOut.TabIndex = 7;
-            this.lblTimeOut.Text = "Time Out";
-            this.lblTimeOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSummaryRound.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummaryRound.ForeColor = System.Drawing.Color.Black;
+            this.lblSummaryRound.Location = new System.Drawing.Point(158, 215);
+            this.lblSummaryRound.Name = "lblSummaryRound";
+            this.lblSummaryRound.Size = new System.Drawing.Size(385, 46);
+            this.lblSummaryRound.TabIndex = 10;
+            this.lblSummaryRound.Text = "Round: 1";
+            this.lblSummaryRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSummaryScore
+            // 
+            this.lblSummaryScore.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummaryScore.ForeColor = System.Drawing.Color.Black;
+            this.lblSummaryScore.Location = new System.Drawing.Point(158, 158);
+            this.lblSummaryScore.Name = "lblSummaryScore";
+            this.lblSummaryScore.Size = new System.Drawing.Size(385, 46);
+            this.lblSummaryScore.TabIndex = 9;
+            this.lblSummaryScore.Text = "Score: 0";
+            this.lblSummaryScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPlayAgain
             // 
@@ -203,33 +217,25 @@
             this.btnPlayAgain.UseVisualStyleBackColor = false;
             this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
-            // lblSummaryScore
+            // lblTimeOut
             // 
-            this.lblSummaryScore.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummaryScore.ForeColor = System.Drawing.Color.Black;
-            this.lblSummaryScore.Location = new System.Drawing.Point(158, 158);
-            this.lblSummaryScore.Name = "lblSummaryScore";
-            this.lblSummaryScore.Size = new System.Drawing.Size(385, 46);
-            this.lblSummaryScore.TabIndex = 9;
-            this.lblSummaryScore.Text = "Score: 0";
-            this.lblSummaryScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSummaryRound
-            // 
-            this.lblSummaryRound.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummaryRound.ForeColor = System.Drawing.Color.Black;
-            this.lblSummaryRound.Location = new System.Drawing.Point(158, 215);
-            this.lblSummaryRound.Name = "lblSummaryRound";
-            this.lblSummaryRound.Size = new System.Drawing.Size(385, 46);
-            this.lblSummaryRound.TabIndex = 10;
-            this.lblSummaryRound.Text = "Round: 1";
-            this.lblSummaryRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTimeOut.AutoSize = true;
+            this.lblTimeOut.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.lblTimeOut.Location = new System.Drawing.Point(152, 26);
+            this.lblTimeOut.Name = "lblTimeOut";
+            this.lblTimeOut.Size = new System.Drawing.Size(397, 112);
+            this.lblTimeOut.TabIndex = 7;
+            this.lblTimeOut.Text = "Time Out";
+            this.lblTimeOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(53)))));
+            this.BackgroundImage = global::QuizApp.Properties.Resources.bg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(875, 537);
             this.Controls.Add(this.pnTimeOut);
             this.Controls.Add(this.lblRound);
