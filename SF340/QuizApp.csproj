@@ -116,6 +116,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="img\bg.jpg" />
+    <None Include="img\sound-mute-24.png" />
+    <None Include="img\sound-volume-24.png" />
+    <None Include="sound\Among_us_theme.wav" />
     <Content Include="vocab\Vocab.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

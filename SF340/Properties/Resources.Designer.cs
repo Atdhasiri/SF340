@@ -61,6 +61,15 @@ namespace QuizApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Among_us_theme {
+            get {
+                return ResourceManager.GetStream("Among_us_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap bg {
@@ -117,6 +126,26 @@ namespace QuizApp.Properties {
             get {
                 object obj = ResourceManager.GetObject("quiz_app_128", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound_mute_24 {
+            get {
+                object obj = ResourceManager.GetObject("sound_mute_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound_volume_24 {
+            get {
+                object obj = ResourceManager.GetObject("sound_volume_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

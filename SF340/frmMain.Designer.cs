@@ -44,6 +44,7 @@
             this.lblSummaryScore = new System.Windows.Forms.Label();
             this.btnPlayAgain = new System.Windows.Forms.Button();
             this.lblTimeOut = new System.Windows.Forms.Label();
+            this.btnSound = new System.Windows.Forms.Button();
             this.pnTimeOut.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,7 +133,7 @@
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(756, 9);
+            this.lblScore.Location = new System.Drawing.Point(720, 9);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(107, 24);
             this.lblScore.TabIndex = 5;
@@ -176,7 +177,7 @@
             this.pnTimeOut.Controls.Add(this.lblSummaryScore);
             this.pnTimeOut.Controls.Add(this.btnPlayAgain);
             this.pnTimeOut.Controls.Add(this.lblTimeOut);
-            this.pnTimeOut.Location = new System.Drawing.Point(87, 48);
+            this.pnTimeOut.Location = new System.Drawing.Point(87, 54);
             this.pnTimeOut.Name = "pnTimeOut";
             this.pnTimeOut.Size = new System.Drawing.Size(700, 441);
             this.pnTimeOut.TabIndex = 12;
@@ -229,6 +230,19 @@
             this.lblTimeOut.Text = "Time Out";
             this.lblTimeOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnSound
+            // 
+            this.btnSound.BackColor = System.Drawing.Color.Transparent;
+            this.btnSound.BackgroundImage = global::QuizApp.Properties.Resources.sound_volume_24;
+            this.btnSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSound.Location = new System.Drawing.Point(838, 11);
+            this.btnSound.Name = "btnSound";
+            this.btnSound.Size = new System.Drawing.Size(25, 25);
+            this.btnSound.TabIndex = 13;
+            this.btnSound.UseVisualStyleBackColor = false;
+            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,7 +250,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(53)))));
             this.BackgroundImage = global::QuizApp.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(875, 537);
+            this.ClientSize = new System.Drawing.Size(875, 549);
+            this.Controls.Add(this.btnSound);
             this.Controls.Add(this.pnTimeOut);
             this.Controls.Add(this.lblRound);
             this.Controls.Add(this.lblTime);
@@ -276,6 +291,7 @@
         private System.Windows.Forms.Label lblSummaryScore;
         private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Label lblTimeOut;
+        private System.Windows.Forms.Button btnSound;
     }
 }
 

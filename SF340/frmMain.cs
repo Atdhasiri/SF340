@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace QuizApp
 {
@@ -18,6 +19,7 @@ namespace QuizApp
         private int totalTime;
         private int totalRound;
         private Question question;
+        private SoundPlayer soundPlayer;
 
         public frmMain()
         {
@@ -113,11 +115,33 @@ namespace QuizApp
             lblTime.Text = "Time: " + this.totalTime + " s";
 
             timeOut.Start();
+
+            this.soundPlayer = new SoundPlayer(Properties.Resources.Among_us_theme);
+            if (Properties.Settings.Default.sound == 1)
+                this.soundPlayer.PlayLooping();
         }
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
             startGame();
+        }
+
+        private void btnSound_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.sound == 1)
+            {
+                btnSound.BackgroundImage = Properties.Resources.sound_mute_24;
+                Properties.Settings.Default.sound = 0;
+                Properties.Settings.Default.Save();
+                this.soundPlayer.Stop();
+            }
+            else
+            {
+                btnSound.BackgroundImage = Properties.Resources.sound_volume_24;
+                Properties.Settings.Default.sound = 1;
+                Properties.Settings.Default.Save();
+                this.soundPlayer.PlayLooping();
+            }
         }
     }
 }

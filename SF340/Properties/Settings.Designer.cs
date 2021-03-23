@@ -22,5 +22,17 @@ namespace QuizApp.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int sound {
+            get {
+                return ((int)(this["sound"]));
+            }
+            set {
+                this["sound"] = value;
+            }
+        }
     }
 }
