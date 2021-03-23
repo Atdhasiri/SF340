@@ -17,3 +17,22 @@ D:\SF340\SF340\SF340\obj\Debug\SF340.csproj.CoreCompileInputs.cache
 D:\SF340\SF340\SF340\obj\Debug\SF340.csproj.CopyComplete
 D:\SF340\SF340\SF340\obj\Debug\SF340.exe
 D:\SF340\SF340\SF340\obj\Debug\SF340.pdb
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\EntityFramework.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\System.Data.SQLite.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\EntityFramework.xml
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\System.Data.SQLite.xml
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\SF340.csprojAssemblyReference.cache
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\SF340.csproj.GenerateResource.cache
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\SF340.csproj.CoreCompileInputs.cache
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\SF340.csproj.CopyComplete
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\TU-GET Vocab.exe.config
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\TU-GET Vocab.exe
+C:\Users\Administer\Documents\GitHub\SF340\SF340\bin\Debug\TU-GET Vocab.pdb
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\TU-GET Vocab.exe
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\TU-GET Vocab.pdb
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\QuizApp.Form1.resources
+C:\Users\Administer\Documents\GitHub\SF340\SF340\obj\Debug\QuizApp.Properties.Resources.resources

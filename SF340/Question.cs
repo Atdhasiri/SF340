@@ -2,76 +2,107 @@
 using System.Data.SQLite;
 using System.Linq;
 
-namespace SF340
+namespace QuizApp
 {
     public class Question
     {
-        private static SQLiteConnection con;
-        private static int TABLE_ROW_COUNT = 30;
-        private static string DB_PATH = @"data source=D:\SF340\SF340\SF340\Vocab.db";
+        private SQLiteConnection con;
+        private Random rand = new Random();
+        private string DB_PATH = @"data source=.\vocab\Vocab.db";
 
-        private int[] randomNumbers;
-        private string question, answer;
-        private string[] choice;
+        private int countVocab;
+        private string question;
+        private string answer;
+        private string[] choices;
+        private int[] idWords;
 
         public Question()
         {
-            checkConnection();
-            choice = new string[4];
-            this.randomNumbers = get4RandomNumbers(TABLE_ROW_COUNT);
-            selectQuestion(randomNumbers[0]);
-            selectChoice();
+            this.choices = new string[4];
+            this.idWords = new int[4];
+
+            openConnection();
+            setCountVocab();
+            randomIDWords();
+            setQuestion();
+            setChoices();
+            closeConnection();
         }
 
-        private void selectQuestion(int i)
+        private void setCountVocab()
         {
-            string query = "SELECT word1,word2 FROM synonyms WHERE id=" + i;
+            //Execute
+            string query = "SELECT count(*) FROM synonyms";
             SQLiteCommand cmd = new SQLiteCommand(query, con);
-            SQLiteDataReader rdr = cmd.ExecuteReader();
-            rdr.Read();
-            question = rdr.GetString(0);
-            answer = rdr.GetString(1);
-            choice[0] = answer;
+
+            //Set count of vocab
+            this.countVocab = Convert.ToInt32(cmd.ExecuteScalar());
+
+            //Destroy
+            cmd.Dispose();
         }
 
-        private void selectChoice()
+        private void setQuestion()
         {
+            //Execute
+            string query = "SELECT word1,word2 FROM synonyms WHERE id=" + idWords[0];
+            SQLiteCommand cmd = new SQLiteCommand(query, con);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+
+            //Set question and answer
+            dr.Read();
+            this.question = dr.GetString(0);
+            this.answer = dr.GetString(1);
+            choices[0] = this.answer;
+
+            //Destroy
+            cmd.Dispose();
+            dr.Close();
+        }
+
+        private void setChoices()
+        {
+            //Execute
             string query = "SELECT word2 FROM synonyms WHERE id IN ('" +
-                randomNumbers[1] + "', '" +
-                randomNumbers[2] + "', '" +
-                randomNumbers[3] + "')";
+                idWords[1] + "', '" +
+                idWords[2] + "', '" +
+                idWords[3] + "')";
 
             SQLiteCommand cmd = new SQLiteCommand(query, con);
-            SQLiteDataReader rdr = cmd.ExecuteReader();
-            for (int i = 1; i < 4; i++)
+            SQLiteDataReader dr = cmd.ExecuteReader();
+
+            //Set multi choices
+            for (int i = 1; i <= 3; i++)
             {
-                rdr.Read();
-                choice[i] = rdr.GetString(0);
+                dr.Read();
+                choices[i] = dr.GetString(0);
             }
 
-            Random rnd = new Random();
-            choice = choice.OrderBy(x => rnd.Next()).ToArray();
+            this.choices = this.choices.OrderBy(x => this.rand.Next()).ToArray();
+
+            //Destroy
+            cmd.Dispose();
+            dr.Close();
         }
 
-        private int[] get4RandomNumbers(int max)
+        private void randomIDWords()
         {
-            Random rand = new Random();
-            int[] nums = new int[4];
-            nums[0] = rand.Next(1, max);
+            int i = 0;
             int r;
-            for (int i = 1; i < 4; i++)
+
+            while (i < 4)
             {
-                do
+                r = this.rand.Next(1, this.countVocab + 1); //Random integers that range from minValue to maxValue - 1
+
+                if (!this.idWords.Contains(r))
                 {
-                    r = rand.Next(1, max);
+                    this.idWords[i] = r;
+                    i++;
                 }
-                while (nums.Contains(r));
-                nums[i] = r;
             }
-            return nums;
         }
 
-        private void checkConnection()
+        private void openConnection()
         {
             if (con == null)
             {
@@ -80,20 +111,24 @@ namespace SF340
             }
         }
 
-        public string getQuestion()
+        private void closeConnection()
         {
-            return question;
+            con.Close();
         }
 
-        public string[] getChoice()
+        public string getQuestion()
         {
-            return choice;
+            return this.question;
+        }
+
+        public string[] getChoices()
+        {
+            return this.choices;
         }
 
         public string getAnswer()
         {
-            return answer;
+            return this.answer;
         }
-
     }
 }

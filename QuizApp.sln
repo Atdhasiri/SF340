@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF340", "SF340\SF340.csproj", "{AE2D9C6C-3527-4019-B321-612F0C73548F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizApp", "SF340\QuizApp.csproj", "{AE2D9C6C-3527-4019-B321-612F0C73548F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
