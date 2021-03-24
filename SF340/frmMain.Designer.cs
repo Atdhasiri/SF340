@@ -280,7 +280,7 @@
             this.lblVocab.Name = "lblVocab";
             this.lblVocab.Size = new System.Drawing.Size(351, 224);
             this.lblVocab.TabIndex = 7;
-            this.lblVocab.Text = "TU-GET\r\nVocap";
+            this.lblVocab.Text = "TU-GET\r\nVocab";
             this.lblVocab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
