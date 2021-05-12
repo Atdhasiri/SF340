@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Threading;
+
 
 namespace QuizApp
 {
@@ -46,6 +48,7 @@ namespace QuizApp
             else
                 incorrectAnswer();
 
+
             textBox1.AppendText(this.totalRound.ToString() + ".) ");
             textBox1.AppendText(this.question.getQuestion() + " -> ");
             textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
@@ -53,6 +56,7 @@ namespace QuizApp
             textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
             
            
+
 
             setNewQuestion();
             this.totalRound++;
@@ -83,6 +87,34 @@ namespace QuizApp
         private void incorrectAnswer()
         {
             this.totalTime -= this.PLUS_MINUS_TIME;
+        }
+
+        private void showCorrectAnswer()
+        {
+            changeButtonCollor(btnChoice1);
+            changeButtonCollor(btnChoice2);
+            changeButtonCollor(btnChoice3);
+            changeButtonCollor(btnChoice4);
+        }
+
+        private void changeButtonCollor(Button button)
+        {
+            if (button.Text == capitalize(this.question.getAnswer()))
+            {
+                button.BackColor = Color.Green;
+            }
+            else
+            {
+                button.BackColor = Color.Red;
+            }
+        }
+
+        private void resetButtonColor()
+        {
+            btnChoice1.BackColor = Color.FromArgb(255, 225, 26, 59);
+            btnChoice2.BackColor = Color.FromArgb(255, 18, 104, 205);
+            btnChoice3.BackColor = Color.FromArgb(255, 216, 158, 0);
+            btnChoice4.BackColor = Color.FromArgb(255, 38, 137, 12);
         }
 
         private void setNewQuestion()
@@ -188,6 +220,6 @@ namespace QuizApp
             startGame();
         }
 
-      
+
     }
 }
