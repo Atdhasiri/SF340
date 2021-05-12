@@ -58,8 +58,8 @@ namespace QuizApp
                 timeOut.Stop();
                 pnTimeOut.Visible = true;
                 lblSummaryScore.Text = "Score: " + this.totalScore;
-                lblSummaryRound.Text = "Round: " + this.totalRound;
 
+                textBox1.AppendText("\t\t\t" + "(" + "Total " + ((this.totalRound - 1).ToString()) + " Rounds.) ");
                 btnChoice1.Enabled = false;
                 btnChoice2.Enabled = false;
                 btnChoice3.Enabled = false;
@@ -67,31 +67,42 @@ namespace QuizApp
             }
         }
 
+        private void answer_format()
+        {
+            
+            textBox1.AppendText("[] " + this.question.getQuestion() + " []"+ " -> ");
+            textBox1.AppendText(this.question.getAnswer() + "\r\n"+ "          " + "  :: [] meaning [] :: " );
+            textBox1.AppendText(this.question.getMeaning() + "\r\n");
+            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
+
+        }
+
+
         private void correctAnswer()
         {
             this.totalTime += this.PLUS_MINUS_TIME;
             this.totalScore++;
             lblScore.Text = "Score: " + this.totalScore;
 
-            textBox1.AppendText("(✓) ");
-            textBox1.AppendText(this.totalRound.ToString() + ".) ");
-            textBox1.AppendText(this.question.getQuestion() + " -> ");
-            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
-            textBox1.AppendText(this.question.getMeaning() + "\r\n");
-            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
+            textBox1.AppendText("( ✓ ) ");
+            textBox1.AppendText("(" + this.totalRound.ToString() + ".) ");
+            answer_format();
+
+
 
         }
 
         private void incorrectAnswer()
         {
             this.totalTime -= this.PLUS_MINUS_TIME;
+            lblScore.Text = "Score: " + this.totalScore;
 
-            textBox1.AppendText("(x) ");
-            textBox1.AppendText(this.totalRound.ToString() + ".) ");
-            textBox1.AppendText(this.question.getQuestion() + " -> ");
-            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
-            textBox1.AppendText(this.question.getMeaning() + "\r\n");
-            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
+            textBox1.AppendText("( X ) ");
+            textBox1.AppendText("(" + this.totalRound.ToString() + ".) ");
+            answer_format();
+
+
+
         }
 
         private void showCorrectAnswer()
@@ -154,8 +165,8 @@ namespace QuizApp
                 timeOut.Stop();
                 pnTimeOut.Visible = true;
                 lblSummaryScore.Text = "Score: " + this.totalScore;
-                lblSummaryRound.Text = "Round: " + this.totalRound;
 
+                textBox1.AppendText("\t\t\t" + "("+"Total " + ((this.totalRound-1).ToString()) + " Rounds.) ");
                 btnChoice1.Enabled = false;
                 btnChoice2.Enabled = false;
                 btnChoice3.Enabled = false;
@@ -202,6 +213,7 @@ namespace QuizApp
 
         }
 
+
         private void btnSound_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.sound == 1)
@@ -225,6 +237,10 @@ namespace QuizApp
             startGame();
         }
 
+        private void checkWord()
+        {
+            ///////
+        } 
 
     }
 }
