@@ -76,7 +76,7 @@ namespace QuizApp
             textBox1.AppendText("(✓) ");
             textBox1.AppendText(this.totalRound.ToString() + ".) ");
             textBox1.AppendText(this.question.getQuestion() + " -> ");
-            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
+            textBox1.AppendText(this.question.getAnswer() + " meaning :: ");
             textBox1.AppendText(this.question.getMeaning() + "\r\n");
             textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
 
@@ -89,7 +89,7 @@ namespace QuizApp
             textBox1.AppendText("(x) ");
             textBox1.AppendText(this.totalRound.ToString() + ".) ");
             textBox1.AppendText(this.question.getQuestion() + " -> ");
-            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
+            textBox1.AppendText(this.question.getAnswer() + " meaning :: ");
             textBox1.AppendText(this.question.getMeaning() + "\r\n");
             textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
         }
@@ -199,7 +199,6 @@ namespace QuizApp
         {
             textBox1.Text = String.Empty;
             startGame();
-
         }
 
         private void btnSound_Click(object sender, EventArgs e)
@@ -224,7 +223,5 @@ namespace QuizApp
         {
             startGame();
         }
-
-
     }
 }
