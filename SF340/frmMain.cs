@@ -48,16 +48,6 @@ namespace QuizApp
             else
                 incorrectAnswer();
 
-
-            textBox1.AppendText(this.totalRound.ToString() + ".) ");
-            textBox1.AppendText(this.question.getQuestion() + " -> ");
-            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
-            textBox1.AppendText(this.question.getMeaning() + "\r\n");
-            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
-            
-           
-
-
             setNewQuestion();
             this.totalRound++;
             lblRound.Text = "Round: " + this.totalRound;
@@ -82,11 +72,26 @@ namespace QuizApp
             this.totalTime += this.PLUS_MINUS_TIME;
             this.totalScore++;
             lblScore.Text = "Score: " + this.totalScore;
+
+            textBox1.AppendText("(✓) ");
+            textBox1.AppendText(this.totalRound.ToString() + ".) ");
+            textBox1.AppendText(this.question.getQuestion() + " -> ");
+            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
+            textBox1.AppendText(this.question.getMeaning() + "\r\n");
+            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
+
         }
 
         private void incorrectAnswer()
         {
             this.totalTime -= this.PLUS_MINUS_TIME;
+
+            textBox1.AppendText("(x) ");
+            textBox1.AppendText(this.totalRound.ToString() + ".) ");
+            textBox1.AppendText(this.question.getQuestion() + " -> ");
+            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
+            textBox1.AppendText(this.question.getMeaning() + "\r\n");
+            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
         }
 
         private void showCorrectAnswer()
