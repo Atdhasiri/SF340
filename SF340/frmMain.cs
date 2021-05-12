@@ -20,6 +20,8 @@ namespace QuizApp
         private int totalRound;
         private Question question;
         private SoundPlayer soundPlayer;
+        private List<String> allQuestionWords = new List<String>();
+        private List<String> allAnswerWords = new List<String>();
 
         public frmMain()
         {
@@ -44,9 +46,17 @@ namespace QuizApp
             else
                 incorrectAnswer();
 
+            allQuestionWords.Add(this.question.getQuestion());
+            allAnswerWords.Add(this.question.getAnswer());
+
+            label1.Text = allQuestionWords[0];
+            Console.WriteLine("Question: "+ allQuestionWords);
+            Console.WriteLine("Answer: " + allAnswerWords);
+
             setNewQuestion();
             this.totalRound++;
             lblRound.Text = "Round: " + this.totalRound;
+
 
             if (this.totalTime <= 0)
             {
@@ -68,12 +78,17 @@ namespace QuizApp
             this.totalTime += this.PLUS_MINUS_TIME;
             this.totalScore++;
             lblScore.Text = "Score: " + this.totalScore;
+            
+            
+
         }
 
         private void incorrectAnswer()
         {
             this.totalTime -= this.PLUS_MINUS_TIME;
         }
+
+       
 
         private void setNewQuestion()
         {

@@ -48,6 +48,7 @@
             this.pnWelcome = new System.Windows.Forms.Panel();
             this.btnPlayNow = new System.Windows.Forms.Button();
             this.lblVocab = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnTimeOut.SuspendLayout();
             this.pnWelcome.SuspendLayout();
             this.SuspendLayout();
@@ -60,10 +61,11 @@
             this.btnChoice1.ForeColor = System.Drawing.Color.White;
             this.btnChoice1.Image = global::QuizApp.Properties.Resources.geometry_triangle_32;
             this.btnChoice1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoice1.Location = new System.Drawing.Point(49, 294);
+            this.btnChoice1.Location = new System.Drawing.Point(37, 239);
+            this.btnChoice1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChoice1.Name = "btnChoice1";
-            this.btnChoice1.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnChoice1.Size = new System.Drawing.Size(385, 100);
+            this.btnChoice1.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnChoice1.Size = new System.Drawing.Size(289, 81);
             this.btnChoice1.TabIndex = 0;
             this.btnChoice1.Text = "Choice 1";
             this.btnChoice1.UseVisualStyleBackColor = false;
@@ -77,10 +79,11 @@
             this.btnChoice2.ForeColor = System.Drawing.Color.White;
             this.btnChoice2.Image = global::QuizApp.Properties.Resources.geometry_star_32;
             this.btnChoice2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoice2.Location = new System.Drawing.Point(440, 294);
+            this.btnChoice2.Location = new System.Drawing.Point(330, 239);
+            this.btnChoice2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChoice2.Name = "btnChoice2";
-            this.btnChoice2.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnChoice2.Size = new System.Drawing.Size(385, 100);
+            this.btnChoice2.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnChoice2.Size = new System.Drawing.Size(289, 81);
             this.btnChoice2.TabIndex = 1;
             this.btnChoice2.Text = "Choice 2";
             this.btnChoice2.UseVisualStyleBackColor = false;
@@ -94,10 +97,11 @@
             this.btnChoice3.ForeColor = System.Drawing.Color.White;
             this.btnChoice3.Image = global::QuizApp.Properties.Resources.geometry_circle_32;
             this.btnChoice3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoice3.Location = new System.Drawing.Point(49, 400);
+            this.btnChoice3.Location = new System.Drawing.Point(37, 325);
+            this.btnChoice3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChoice3.Name = "btnChoice3";
-            this.btnChoice3.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnChoice3.Size = new System.Drawing.Size(385, 100);
+            this.btnChoice3.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnChoice3.Size = new System.Drawing.Size(289, 81);
             this.btnChoice3.TabIndex = 2;
             this.btnChoice3.Text = "Choice 3";
             this.btnChoice3.UseVisualStyleBackColor = false;
@@ -111,10 +115,11 @@
             this.btnChoice4.ForeColor = System.Drawing.Color.White;
             this.btnChoice4.Image = global::QuizApp.Properties.Resources.geometry_square_32;
             this.btnChoice4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoice4.Location = new System.Drawing.Point(440, 400);
+            this.btnChoice4.Location = new System.Drawing.Point(330, 325);
+            this.btnChoice4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChoice4.Name = "btnChoice4";
-            this.btnChoice4.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnChoice4.Size = new System.Drawing.Size(385, 100);
+            this.btnChoice4.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnChoice4.Size = new System.Drawing.Size(289, 81);
             this.btnChoice4.TabIndex = 3;
             this.btnChoice4.Text = "Choice 4";
             this.btnChoice4.UseVisualStyleBackColor = false;
@@ -125,9 +130,10 @@
             this.lblQuestion.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestion.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
-            this.lblQuestion.Location = new System.Drawing.Point(12, 132);
+            this.lblQuestion.Location = new System.Drawing.Point(9, 107);
+            this.lblQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(851, 46);
+            this.lblQuestion.Size = new System.Drawing.Size(638, 37);
             this.lblQuestion.TabIndex = 4;
             this.lblQuestion.Text = "What is synonym of \"..............\" ?";
             this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +143,10 @@
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(720, 9);
+            this.lblScore.Location = new System.Drawing.Point(540, 7);
+            this.lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(107, 24);
+            this.lblScore.Size = new System.Drawing.Size(80, 20);
             this.lblScore.TabIndex = 5;
             this.lblScore.Text = "Score: 0";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,9 +157,10 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(12, 9);
+            this.lblTime.Location = new System.Drawing.Point(9, 7);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(82, 24);
+            this.lblTime.Size = new System.Drawing.Size(70, 19);
             this.lblTime.TabIndex = 6;
             this.lblTime.Text = "Time: 0 s";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,9 +175,10 @@
             this.lblRound.BackColor = System.Drawing.Color.Transparent;
             this.lblRound.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRound.ForeColor = System.Drawing.Color.White;
-            this.lblRound.Location = new System.Drawing.Point(371, 9);
+            this.lblRound.Location = new System.Drawing.Point(278, 7);
+            this.lblRound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRound.Name = "lblRound";
-            this.lblRound.Size = new System.Drawing.Size(133, 24);
+            this.lblRound.Size = new System.Drawing.Size(100, 20);
             this.lblRound.TabIndex = 10;
             this.lblRound.Text = "Round: 1";
             this.lblRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,9 +189,10 @@
             this.btnSound.BackgroundImage = global::QuizApp.Properties.Resources.sound_volume_24;
             this.btnSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSound.Location = new System.Drawing.Point(838, 11);
+            this.btnSound.Location = new System.Drawing.Point(628, 9);
+            this.btnSound.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSound.Name = "btnSound";
-            this.btnSound.Size = new System.Drawing.Size(25, 25);
+            this.btnSound.Size = new System.Drawing.Size(19, 20);
             this.btnSound.TabIndex = 13;
             this.btnSound.UseVisualStyleBackColor = false;
             this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
@@ -194,18 +204,20 @@
             this.pnTimeOut.Controls.Add(this.lblSummaryScore);
             this.pnTimeOut.Controls.Add(this.btnPlayAgain);
             this.pnTimeOut.Controls.Add(this.lblTimeOut);
-            this.pnTimeOut.Location = new System.Drawing.Point(87, 54);
+            this.pnTimeOut.Location = new System.Drawing.Point(65, 44);
+            this.pnTimeOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnTimeOut.Name = "pnTimeOut";
-            this.pnTimeOut.Size = new System.Drawing.Size(700, 441);
+            this.pnTimeOut.Size = new System.Drawing.Size(525, 358);
             this.pnTimeOut.TabIndex = 14;
             // 
             // lblSummaryRound
             // 
             this.lblSummaryRound.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSummaryRound.ForeColor = System.Drawing.Color.Black;
-            this.lblSummaryRound.Location = new System.Drawing.Point(158, 215);
+            this.lblSummaryRound.Location = new System.Drawing.Point(118, 175);
+            this.lblSummaryRound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSummaryRound.Name = "lblSummaryRound";
-            this.lblSummaryRound.Size = new System.Drawing.Size(385, 46);
+            this.lblSummaryRound.Size = new System.Drawing.Size(289, 37);
             this.lblSummaryRound.TabIndex = 10;
             this.lblSummaryRound.Text = "Round: 1";
             this.lblSummaryRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,9 +226,10 @@
             // 
             this.lblSummaryScore.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSummaryScore.ForeColor = System.Drawing.Color.Black;
-            this.lblSummaryScore.Location = new System.Drawing.Point(158, 158);
+            this.lblSummaryScore.Location = new System.Drawing.Point(118, 128);
+            this.lblSummaryScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSummaryScore.Name = "lblSummaryScore";
-            this.lblSummaryScore.Size = new System.Drawing.Size(385, 46);
+            this.lblSummaryScore.Size = new System.Drawing.Size(289, 37);
             this.lblSummaryScore.TabIndex = 9;
             this.lblSummaryScore.Text = "Score: 0";
             this.lblSummaryScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,9 +240,10 @@
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlayAgain.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayAgain.ForeColor = System.Drawing.Color.White;
-            this.btnPlayAgain.Location = new System.Drawing.Point(158, 305);
+            this.btnPlayAgain.Location = new System.Drawing.Point(118, 248);
+            this.btnPlayAgain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(385, 100);
+            this.btnPlayAgain.Size = new System.Drawing.Size(289, 81);
             this.btnPlayAgain.TabIndex = 8;
             this.btnPlayAgain.Text = "Play again !";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
@@ -240,9 +254,10 @@
             this.lblTimeOut.AutoSize = true;
             this.lblTimeOut.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
-            this.lblTimeOut.Location = new System.Drawing.Point(152, 26);
+            this.lblTimeOut.Location = new System.Drawing.Point(114, 21);
+            this.lblTimeOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimeOut.Name = "lblTimeOut";
-            this.lblTimeOut.Size = new System.Drawing.Size(397, 112);
+            this.lblTimeOut.Size = new System.Drawing.Size(318, 90);
             this.lblTimeOut.TabIndex = 7;
             this.lblTimeOut.Text = "Time Out";
             this.lblTimeOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,9 +267,10 @@
             this.pnWelcome.BackColor = System.Drawing.Color.Gainsboro;
             this.pnWelcome.Controls.Add(this.btnPlayNow);
             this.pnWelcome.Controls.Add(this.lblVocab);
-            this.pnWelcome.Location = new System.Drawing.Point(87, 54);
+            this.pnWelcome.Location = new System.Drawing.Point(65, 44);
+            this.pnWelcome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnWelcome.Name = "pnWelcome";
-            this.pnWelcome.Size = new System.Drawing.Size(700, 441);
+            this.pnWelcome.Size = new System.Drawing.Size(525, 358);
             this.pnWelcome.TabIndex = 15;
             // 
             // btnPlayNow
@@ -263,9 +279,10 @@
             this.btnPlayNow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlayNow.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayNow.ForeColor = System.Drawing.Color.White;
-            this.btnPlayNow.Location = new System.Drawing.Point(158, 305);
+            this.btnPlayNow.Location = new System.Drawing.Point(118, 248);
+            this.btnPlayNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlayNow.Name = "btnPlayNow";
-            this.btnPlayNow.Size = new System.Drawing.Size(385, 100);
+            this.btnPlayNow.Size = new System.Drawing.Size(289, 81);
             this.btnPlayNow.TabIndex = 8;
             this.btnPlayNow.Text = "Play now";
             this.btnPlayNow.UseVisualStyleBackColor = false;
@@ -276,21 +293,33 @@
             this.lblVocab.AutoSize = true;
             this.lblVocab.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVocab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
-            this.lblVocab.Location = new System.Drawing.Point(175, 36);
+            this.lblVocab.Location = new System.Drawing.Point(131, 29);
+            this.lblVocab.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVocab.Name = "lblVocab";
-            this.lblVocab.Size = new System.Drawing.Size(351, 224);
+            this.lblVocab.Size = new System.Drawing.Size(283, 180);
             this.lblVocab.TabIndex = 7;
             this.lblVocab.Text = "TU-GET\r\nVocap";
             this.lblVocab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(422, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "label1";
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(53)))));
             this.BackgroundImage = global::QuizApp.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(875, 549);
+            this.ClientSize = new System.Drawing.Size(656, 446);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnWelcome);
             this.Controls.Add(this.pnTimeOut);
             this.Controls.Add(this.btnSound);
@@ -305,6 +334,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -338,6 +368,7 @@
         private System.Windows.Forms.Panel pnWelcome;
         private System.Windows.Forms.Button btnPlayNow;
         private System.Windows.Forms.Label lblVocab;
+        private System.Windows.Forms.Label label1;
     }
 }
 
