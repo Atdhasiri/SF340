@@ -20,6 +20,8 @@ namespace QuizApp
         private int totalRound;
         private Question question;
         private SoundPlayer soundPlayer;
+        
+         
 
         public frmMain()
         {
@@ -43,6 +45,14 @@ namespace QuizApp
                 correctAnswer();
             else
                 incorrectAnswer();
+
+            textBox1.AppendText(this.totalRound.ToString() + ".) ");
+            textBox1.AppendText(this.question.getQuestion() + " -> ");
+            textBox1.AppendText(this.question.getAnswer() + "meaning :: ");
+            textBox1.AppendText(this.question.getMeaning() + "\r\n");
+            textBox1.AppendText("---------------------------------------------------------------------------------------------------" + "\r\n");
+            
+           
 
             setNewQuestion();
             this.totalRound++;
@@ -150,7 +160,9 @@ namespace QuizApp
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
+            textBox1.Text = String.Empty;
             startGame();
+
         }
 
         private void btnSound_Click(object sender, EventArgs e)
@@ -175,5 +187,7 @@ namespace QuizApp
         {
             startGame();
         }
+
+      
     }
 }

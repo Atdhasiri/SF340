@@ -41,6 +41,7 @@
             this.lblRound = new System.Windows.Forms.Label();
             this.btnSound = new System.Windows.Forms.Button();
             this.pnTimeOut = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblSummaryRound = new System.Windows.Forms.Label();
             this.lblSummaryScore = new System.Windows.Forms.Label();
             this.btnPlayAgain = new System.Windows.Forms.Button();
@@ -62,7 +63,7 @@
             this.btnChoice1.Image = global::QuizApp.Properties.Resources.geometry_triangle_32;
             this.btnChoice1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoice1.Location = new System.Drawing.Point(37, 239);
-            this.btnChoice1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChoice1.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoice1.Name = "btnChoice1";
             this.btnChoice1.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.btnChoice1.Size = new System.Drawing.Size(289, 81);
@@ -81,7 +82,7 @@
             this.btnChoice2.Image = global::QuizApp.Properties.Resources.geometry_star_32;
             this.btnChoice2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoice2.Location = new System.Drawing.Point(330, 239);
-            this.btnChoice2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChoice2.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoice2.Name = "btnChoice2";
             this.btnChoice2.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.btnChoice2.Size = new System.Drawing.Size(289, 81);
@@ -100,7 +101,7 @@
             this.btnChoice3.Image = global::QuizApp.Properties.Resources.geometry_circle_32;
             this.btnChoice3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoice3.Location = new System.Drawing.Point(37, 325);
-            this.btnChoice3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChoice3.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoice3.Name = "btnChoice3";
             this.btnChoice3.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.btnChoice3.Size = new System.Drawing.Size(289, 81);
@@ -119,7 +120,7 @@
             this.btnChoice4.Image = global::QuizApp.Properties.Resources.geometry_square_32;
             this.btnChoice4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoice4.Location = new System.Drawing.Point(330, 325);
-            this.btnChoice4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChoice4.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoice4.Name = "btnChoice4";
             this.btnChoice4.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.btnChoice4.Size = new System.Drawing.Size(289, 81);
@@ -194,7 +195,7 @@
             this.btnSound.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSound.Location = new System.Drawing.Point(18, 35);
-            this.btnSound.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSound.Margin = new System.Windows.Forms.Padding(2);
             this.btnSound.Name = "btnSound";
             this.btnSound.Size = new System.Drawing.Size(26, 20);
             this.btnSound.TabIndex = 13;
@@ -203,25 +204,36 @@
             // 
             // pnTimeOut
             // 
-            this.pnTimeOut.BackColor = System.Drawing.Color.Red;
+            this.pnTimeOut.BackColor = System.Drawing.Color.Firebrick;
+            this.pnTimeOut.Controls.Add(this.textBox1);
             this.pnTimeOut.Controls.Add(this.lblSummaryRound);
             this.pnTimeOut.Controls.Add(this.lblSummaryScore);
             this.pnTimeOut.Controls.Add(this.btnPlayAgain);
             this.pnTimeOut.Controls.Add(this.lblTimeOut);
-            this.pnTimeOut.Location = new System.Drawing.Point(67, 83);
-            this.pnTimeOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnTimeOut.Location = new System.Drawing.Point(11, 11);
+            this.pnTimeOut.Margin = new System.Windows.Forms.Padding(2);
             this.pnTimeOut.Name = "pnTimeOut";
-            this.pnTimeOut.Size = new System.Drawing.Size(525, 295);
+            this.pnTimeOut.Size = new System.Drawing.Size(616, 410);
             this.pnTimeOut.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(19, 159);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(582, 167);
+            this.textBox1.TabIndex = 11;
             // 
             // lblSummaryRound
             // 
             this.lblSummaryRound.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSummaryRound.ForeColor = System.Drawing.Color.Black;
-            this.lblSummaryRound.Location = new System.Drawing.Point(118, 153);
+            this.lblSummaryRound.Location = new System.Drawing.Point(104, 126);
             this.lblSummaryRound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSummaryRound.Name = "lblSummaryRound";
-            this.lblSummaryRound.Size = new System.Drawing.Size(289, 37);
+            this.lblSummaryRound.Size = new System.Drawing.Size(109, 37);
             this.lblSummaryRound.TabIndex = 10;
             this.lblSummaryRound.Text = "Round: 1";
             this.lblSummaryRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,10 +242,10 @@
             // 
             this.lblSummaryScore.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSummaryScore.ForeColor = System.Drawing.Color.Black;
-            this.lblSummaryScore.Location = new System.Drawing.Point(118, 116);
+            this.lblSummaryScore.Location = new System.Drawing.Point(2, 126);
             this.lblSummaryScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSummaryScore.Name = "lblSummaryScore";
-            this.lblSummaryScore.Size = new System.Drawing.Size(289, 37);
+            this.lblSummaryScore.Size = new System.Drawing.Size(112, 35);
             this.lblSummaryScore.TabIndex = 9;
             this.lblSummaryScore.Text = "Score: 0";
             this.lblSummaryScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,10 +257,10 @@
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlayAgain.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayAgain.ForeColor = System.Drawing.Color.White;
-            this.btnPlayAgain.Location = new System.Drawing.Point(118, 201);
-            this.btnPlayAgain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPlayAgain.Location = new System.Drawing.Point(230, 336);
+            this.btnPlayAgain.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(289, 81);
+            this.btnPlayAgain.Size = new System.Drawing.Size(186, 46);
             this.btnPlayAgain.TabIndex = 8;
             this.btnPlayAgain.Text = "Play again !";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
@@ -259,7 +271,7 @@
             this.lblTimeOut.AutoSize = true;
             this.lblTimeOut.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeOut.ForeColor = System.Drawing.Color.White;
-            this.lblTimeOut.Location = new System.Drawing.Point(108, 23);
+            this.lblTimeOut.Location = new System.Drawing.Point(150, 0);
             this.lblTimeOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimeOut.Name = "lblTimeOut";
             this.lblTimeOut.Size = new System.Drawing.Size(318, 90);
@@ -272,8 +284,8 @@
             this.pnWelcome.BackColor = System.Drawing.Color.Transparent;
             this.pnWelcome.Controls.Add(this.btnPlayNow);
             this.pnWelcome.Controls.Add(this.lblVocab);
-            this.pnWelcome.Location = new System.Drawing.Point(11, 11);
-            this.pnWelcome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnWelcome.Location = new System.Drawing.Point(7, 7);
+            this.pnWelcome.Margin = new System.Windows.Forms.Padding(2);
             this.pnWelcome.Name = "pnWelcome";
             this.pnWelcome.Size = new System.Drawing.Size(638, 427);
             this.pnWelcome.TabIndex = 15;
@@ -286,7 +298,7 @@
             this.btnPlayNow.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayNow.ForeColor = System.Drawing.Color.White;
             this.btnPlayNow.Location = new System.Drawing.Point(179, 284);
-            this.btnPlayNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPlayNow.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlayNow.Name = "btnPlayNow";
             this.btnPlayNow.Size = new System.Drawing.Size(289, 81);
             this.btnPlayNow.TabIndex = 8;
@@ -330,7 +342,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -364,6 +376,7 @@
         private System.Windows.Forms.Panel pnWelcome;
         private System.Windows.Forms.Button btnPlayNow;
         private System.Windows.Forms.Label lblVocab;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

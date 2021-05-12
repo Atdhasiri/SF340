@@ -13,8 +13,10 @@ namespace QuizApp
         private int countVocab;
         private string question;
         private string answer;
+        private string meaning;
         private string[] choices;
         private int[] idWords;
+
 
         public Question()
         {
@@ -45,7 +47,7 @@ namespace QuizApp
         private void setQuestion()
         {
             //Execute
-            string query = "SELECT word1,word2 FROM synonyms WHERE id=" + idWords[0];
+            string query = "SELECT word1,word2,meaning FROM synonyms WHERE id=" + idWords[0];
             SQLiteCommand cmd = new SQLiteCommand(query, con);
             SQLiteDataReader dr = cmd.ExecuteReader();
 
@@ -53,6 +55,8 @@ namespace QuizApp
             dr.Read();
             this.question = dr.GetString(0);
             this.answer = dr.GetString(1);
+            this.meaning = dr.GetString(2);
+
             choices[0] = this.answer;
 
             //Destroy
@@ -129,6 +133,10 @@ namespace QuizApp
         public string getAnswer()
         {
             return this.answer;
+        }
+        public string getMeaning()
+        {
+            return this.meaning;
         }
     }
 }
